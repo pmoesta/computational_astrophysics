@@ -39,8 +39,7 @@ Github works best is we communicate via [secure
 shell](https://en.wikipedia.org/wiki/Secure_Shell) or *SSH*.
 
 There is some nice documentation describing key pairs in the Software
-Carpentry [Create an SSH key pair](https://swcarpentry.github.io/git-novice/07-github/index.html#3-ssh-background-and-setup)
-section.
+Carpentry [Create an SSH key pair](https://swcarpentry.github.io/git-novice/07-github.html)
 
 Here's how we will set things up:
 

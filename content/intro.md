@@ -1,15 +1,16 @@
-AST 390: Computational Astrophysics
+Computational Astrophysics
 ===================================
 
-Michael Zingale
+Philipp Mösta
 
-(Spring 2023)
+(Spring 2024)
 
-This is a collection of notebooks on computational (astro)physics.
-Starting at the beginning, these notebooks introduce numerical methods
-for derivatives, integration, rooting finding, ODEs, and linear algebra
-and then move onto applications in astrophysics.
-
+This is a collection of notebooks on computational astrophysics.
+The notebooks build on/modify the content available as part of 
+[Mike Zingale's AST390 course](https://github.com/zingale/computational_astrophysics)
+and introduce numerical methods for derivatives, integration, 
+rooting finding, ODEs, and linear algebra and then move onto 
+applications in astrophysics. 
 
 List of Astrophysical Applications
 ----------------------------------

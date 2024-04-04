@@ -58,7 +58,7 @@ It may ask you where you want the fork to live&mdash;you want it to live
 under your profile / username.
 
 This will bring you to a new github page, displaying the fork, with a
-URL that should look something like: ``https://github.com/zingale/test-repo``
+URL that should look something like: ``https://github.com/pmoesta/test-repo``
 
 Now click on the *code* button and copy the SSH location.
 

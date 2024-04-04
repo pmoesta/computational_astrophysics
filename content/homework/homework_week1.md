@@ -6,7 +6,7 @@ our class slack, but you must write your own solutions, including your
 own source code.
 
 All code should be uploaded to github classroom under the Assigment
-Homework (all weeks) along with any analytic derivations, notes, etc.
+"Homework (all weeks)" along with any analytic derivations, notes, etc.
 ```
 
 ## Differentiation

@@ -181,7 +181,7 @@ parts:
 
   - caption: Homework
     chapters:
-    - file: homework/homework1
+    - file: homework/homework_week1
       sections:
       - file: homework/hw1-solutions
     - file: homework/homework2

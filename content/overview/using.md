@@ -5,12 +5,13 @@ a collection of [Jupyter](https://jupyter.org/) notebooks and markdown
 pages.
 
 The course is on Github at:
-https://github.com/zingale/computational_astrophysics, and the course
+https://github.com/pmoesta/computational_astrophysics, and the course
 website is built automatically via a Github action each time a change
 is pushed.
 
 If you find any problems or have suggestions for improving the notes,
-feel free to create an issue or pull request at the Github repo.
+feel free to create an issue or pull request at the Github repo or contact
+me on slack or via email.
 
 ## Interactive Usage
 

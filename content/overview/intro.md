@@ -39,7 +39,7 @@ in python .
 
 Some resources:
 
-* Useful python class notes from Mike Zingalge (Stony Brook) are available
-* at: https://sbu-python-class.github.io/python-science/Introduction.html
+* Useful python class notes from Mike Zingalge (Stony Brook) are available at
+  : https://sbu-python-class.github.io/python-science/Introduction.html
 
 * C++ class notes from Mike Zingale (Stony Brook) are available at: https://zingale.github.io/phy504/

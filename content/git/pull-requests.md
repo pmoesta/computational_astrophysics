@@ -7,9 +7,9 @@ around pulls.
 
 How do we contribute to a project that we don't own?
 
-Here's a github *organization* for our class: https://github.com/ast390-sbu
+Here's a github *organization* for our class: https://github.com/Computational-Astrophysics-API
 
-and here's a simple repo in this organization: https://github.com/ast390-sbu/test-repo
+and here's a simple repo in this organization: https://github.com/Computational-Astrophysics-API/test-repo
 
 ```{note}
 An organization is meant to be used by a collection of developers who
@@ -20,7 +20,7 @@ managing who can do different things to the repos under its control.
 Let's clone this repo:
 
 ```bash
-git clone git@github.com:phy504-sbu/test-repo.git
+git clone git@github.com/Computational-Astrophysics-API/test-repo.git
 cd test-repo
 ```
 
@@ -28,8 +28,8 @@ Now, let's each try to add a file of the form *username.txt* containing
 your full name.  Ex:
 
 ```bash
-echo Michael Zingale > zingale.txt
-git add zingale.txt
+echo Philipp Moesta > moesta.txt
+git add moesta.txt
 git commit
 ```
 
@@ -118,7 +118,7 @@ The overall workflow that we did: fork, push to our fork, issue a PR, looks like
 
 ## Our class notes github
 
-Let's take a tour of our class notes on github: https://github.com/zingale/phy504
+Let's take a tour of our class notes on github: https://github.com/pmoesta/computational_astrophysics
 
 There are a lot of other features that github provides that we will explore later in the semester, including:
 

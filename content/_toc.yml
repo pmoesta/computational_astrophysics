@@ -184,7 +184,7 @@ parts:
     - file: homework/homework_week1
       sections:
       - file: homework/hw1-solutions
-    - file: homework/homework2
+    - file: homework/homework_week2
       sections:
       - file: homework/hw2-solutions
     - file: homework/homework3

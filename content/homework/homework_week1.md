@@ -1,4 +1,4 @@
-# Homework for week 1-2
+# Homework 1
 
 ```{note}
 You are free to discuss these questions with your classmates and on

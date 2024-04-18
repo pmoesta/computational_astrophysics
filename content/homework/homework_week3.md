@@ -1,4 +1,4 @@
-# Homework 3-4
+# Homework 3
 
 ```{note}
 You are free to discuss these questions with your classmates and on

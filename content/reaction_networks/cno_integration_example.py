@@ -466,7 +466,7 @@ def rhs(t, Y, rho, T, screen_func=None):
 @numba.njit()
 def rhs_eq(t, Y, rho, T, screen_func):
 
-    tf = Tfactors(T)
+    tf = Tfactors.evaluate_tfactors(T)
     rate_eval = RateEval()
 
     # reaclib rates

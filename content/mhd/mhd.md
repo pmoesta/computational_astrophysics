@@ -84,7 +84,7 @@ $$c_s = \sqrt{\frac{\Gamma_1 p}{\rho}}$$
 
 In MHD, we can also define the Alfven velocity
 
-$$c_A = \sqrt{\frac{B}{\sqrt{\mu_0 \rho}}$$,
+$$c_A = \sqrt{\frac{B}{\sqrt{\mu_0 \rho}}}$$,
 
 and the fast magnetosonic speed
 

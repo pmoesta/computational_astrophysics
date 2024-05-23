@@ -40,7 +40,7 @@ $${\bf U} = \left ( \begin{array}{c} \rho \\ \rho u \\ \rho E \\ \vec{B}\end{arr
 
 and the flux, ${\bf F}({\bf U})$ as:
 
-$${\bf F} = \left ( \begin{array}{c} \rho u \\ \rho u^2 + p + \frac{B^2}{2} - \vec{B} \cdot \vec{B} \\ (\rho E + p) u - \vec{B} (\vec{u}\cdot \vec{B}) \\ \vec{B}u - u\vec{B} \end{array} \right )$$
+$${\bf F} = \left ( \begin{array}{c} \rho u \\ \rho u^2 + p + \frac{B^2}{2} - \vec{B} \cdot \vec{B} \\ (\rho E + p) u - \vec{B} (\vec{u}\cdot \vec{B}) \\ \vec{B}\vec{u} - \vec{u}\vec{B} \end{array} \right )$$
 
 and then our system in conservative form is:
 

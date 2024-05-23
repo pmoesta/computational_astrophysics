@@ -53,28 +53,13 @@ conservative update for the system:
 $$\frac{\partial {\bf U}_i}{\partial t} =
   - \frac{1}{\Delta x} \left [ {\bf F}({\bf U}_{i+1/2}) - {\bf F}({\bf U}_{i+1/2}) \right ]$$
 
-This means that we will be able to use the same basic solution methodology
-from advection and Burgers' equation with the Euler equations, so long
-as we can find the fluxes.  This primarily means that we need to understand the Riemann
-problem for the Euler equations.
-
 ## Primitive variable form
 
-We can alternately express the Euler equations in terms of the primitive variables, ${\bf q}$:
+We again can express the MHD equations in terms of the primitive variables, ${\bf q}$:
 
 $${\bf q} = \left ( \begin{array}{c} \rho \\ u \\ p \end{array} \right )$$
 
 and the evolution equations are:
-
-$$
-\left ( \begin{array}{c} \rho \\ u \\ p \end{array} \right )_t +
-   \left ( \begin{array}{c} u & \rho & 0 \\ 0 & u & 1/\rho \\ 0 & \Gamma_1 p & u \end{array} \right )
-   \left ( \begin{array}{c} \rho \\ u \\ p \end{array} \right )_x = 0
-$$
-
-where $\Gamma_1 = d \log p/d \log \rho |_s$
-
-or compactly:
 
 $${\bf q}_t + {\bf A}({\bf q}) {\bf q}_x = 0$$
 
@@ -82,7 +67,7 @@ For Euler, we defined the speed of sound as:
 
 $$c_s = \sqrt{\frac{\Gamma_1 p}{\rho}}$$
 
-In MHD, we can also define the Alfven velocity
+In MHD, we can also define the Alfven velocity:
 
 $$c_A = \sqrt{\frac{B}{\sqrt{\mu_0 \rho}}}$$,
 

@@ -160,12 +160,12 @@ parts:
       sections:
       - file: reaction_networks/application-CNO-network
 
- - caption: Magnetohydrodynamics
+  - caption: Magnetohydrodynamics
     chapters:
     - file: mhd/mhd
     - file: mhd/euler-riemann
-    - file: mhd/mhd-solver
-    - file: mhd/mhd-applications
+    #- file: mhd/mhd-solver
+    #- file: mhd/mhd-applications
     
 #  - caption: Machine Learning
 #    chapters:

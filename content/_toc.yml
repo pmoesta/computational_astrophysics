@@ -160,24 +160,31 @@ parts:
       sections:
       - file: reaction_networks/application-CNO-network
 
-  - caption: Machine Learning
+ - caption: Magnetohydrodynamics
     chapters:
-    - file: machine-learning/neural-net-basics
-      sections:
-      - file: machine-learning/gradient-descent
-      - file: machine-learning/neural-net-derivation
-      - file: machine-learning/last-number
-    - file: machine-learning/neural-net-hidden
-      sections:
-      - file: machine-learning/last-number-hidden
-      - file: machine-learning/neural-net-mnist
-      - file: machine-learning/neural-net-improvements
-    - file: machine-learning/machine-learning-libraries
-      sections:
-      - file: machine-learning/keras-mnist
-      - file: machine-learning/keras-last-number
-      - file: machine-learning/keras-clustering
-    - file: machine-learning/machine-learning-in-astro
+    - file: mhd/mhd
+    - file: mhd/mhd-riemann
+    - file: mhd/mhd-solver
+    - file: mhd/mhd-applications
+    
+#  - caption: Machine Learning
+#    chapters:
+#    - file: machine-learning/neural-net-basics
+#      sections:
+#      - file: machine-learning/gradient-descent
+#      - file: machine-learning/neural-net-derivation
+#      - file: machine-learning/last-number
+#    - file: machine-learning/neural-net-hidden
+#      sections:
+#      - file: machine-learning/last-number-hidden
+#      - file: machine-learning/neural-net-mnist
+#      - file: machine-learning/neural-net-improvements
+#    - file: machine-learning/machine-learning-libraries
+#      sections:
+#      - file: machine-learning/keras-mnist
+#      - file: machine-learning/keras-last-number
+#      - file: machine-learning/keras-clustering
+#    - file: machine-learning/machine-learning-in-astro
 
   - caption: Homework
     chapters:

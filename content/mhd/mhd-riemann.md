@@ -2,7 +2,7 @@ As for the Euler equations we need to compute the fluxes through the interface
 and solve the Riemann problem for the MHD equations.  We use the same formulations with
 left and right primitive variable states and we want to find the unique state on the interface:
     
-$${\\bf q}_{i+1/2} = \\mathcal{R}({\\bf q}_{i+1/2,L}, {\\bf q}_{i+1/2,R})$$
+$${\bf q}_{i+1/2} = \mathcal{R}({\bf q}_{i+1/2,L}, {\bf q}_{i+1/2,R})$$
     
 Information about the jump across this interface will be carried away from the interface by now seven magnetohydrodynamic waves.  We can define eight regions separated by the seven waves.
     

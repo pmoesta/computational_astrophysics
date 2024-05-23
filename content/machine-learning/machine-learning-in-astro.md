@@ -31,8 +31,6 @@ Some theoretical examples:
 
 * [Machine Learning for Conservative-to-Primitive in Relativistic Hydrodynamics](https://arxiv.org/abs/2109.02679) by Dieselhorst et al.
 
-* [Machine learning moment closure models for the radiative transfer equation I: Directly learning a gradient based closure](https://www.sciencedirect.com/science/article/abs/pii/S0021999122000031) by Huang et al.
-
 * [Deep Learning of the Eddington Tensor in Core-collapse Supernova Simulation](https://iopscience.iop.org/article/10.3847/1538-4357/ac3998/pdf) by Harada et al.
 
 ## Example notebooks:

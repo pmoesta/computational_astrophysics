@@ -91,7 +91,3 @@ $$
 $$
 
 These are the speeds at which information propagates in our system.
-
-![Riemann Sod problem](riemann-sod.png)
-
-

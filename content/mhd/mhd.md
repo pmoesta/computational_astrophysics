@@ -10,7 +10,7 @@ $$
 \frac{\partial \rho}{\partial t} + \frac{\partial (\rho u)}{\partial x} &= 0 \\
 \frac{\partial (\rho u)}{\partial t} + \frac{\partial}{\partial x} (\rho u^2 + p + \frac{B^2}{2} - \vec{B} \cdot \vec{B}) &= 0 \\
 \frac{\partial (\rho E)}{\partial t} + \frac{\partial}{\partial x} \left [ (\rho E + p) u - \vec{B} (\vec{u}\cdot \vec{B})\right ] &= 0 \\
-\frac{\partial \vec{B}}{\partial t} + \frac{\partial (\vec{B}\vec{u} -\vec{u}\vec{B})}{\partial x} &= 0 \\
+\frac{\partial \vec{B}}{\partial t} + \frac{\partial}{\partial x} (\vec{B}\vec{u} -\vec{u}\vec{B}) &= 0 \\
 \end{align*}
 $$
 

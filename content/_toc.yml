@@ -164,8 +164,6 @@ parts:
     chapters:
     - file: mhd/mhd
     - file: mhd/mhd-riemann
-    #- file: mhd/mhd-solver
-    #- file: mhd/mhd-applications
     
   - caption: Machine Learning
     chapters:

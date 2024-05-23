@@ -163,7 +163,7 @@ parts:
   - caption: Magnetohydrodynamics
     chapters:
     - file: mhd/mhd
-    - file: mhd/euler-riemann
+    - file: mhd/mhd-riemann
     #- file: mhd/mhd-solver
     #- file: mhd/mhd-applications
     

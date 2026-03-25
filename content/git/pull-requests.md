@@ -7,9 +7,9 @@ around pulls.
 
 How do we contribute to a project that we don't own?
 
-Here's a github *organization* for our class: https://github.com/Computational-Astrophysics-API
+Here's a github *organization* for our class: https://github.com:Computational-Astrophysics-API
 
-and here's a simple repo in this organization: https://github.com/Computational-Astrophysics-API/test-repo
+and here's a simple repo in this organization: https://github.com:Computational-Astrophysics-API/test-repo
 
 ```{note}
 An organization is meant to be used by a collection of developers who
@@ -20,7 +20,7 @@ managing who can do different things to the repos under its control.
 Let's clone this repo:
 
 ```bash
-git clone git@github.com/Computational-Astrophysics-API/test-repo.git
+git clone git@github.com:Computational-Astrophysics-API/test-repo.git
 cd test-repo
 ```
 

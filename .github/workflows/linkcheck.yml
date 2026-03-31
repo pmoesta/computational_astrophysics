@@ -10,11 +10,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
     - name: Set up Python
-      uses: actions/setup-python@v5
+      uses: actions/setup-python@v6
       with:
-        python-version: "3.10"
+        python-version: "3.13"
+        cache: "pip"
+
     - name: Install Python dependencies
       run: |
         sudo apt-get install python3-pip
@@ -29,4 +31,4 @@ jobs:
 
     - name: run link check
       run: |
-        jupyter-book build ./content
+        jupyter-book build ./content --builder linkcheck

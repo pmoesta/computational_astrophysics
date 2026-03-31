@@ -10,11 +10,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
     - name: Set up Python
-      uses: actions/setup-python@v5
+      uses: actions/setup-python@v6
       with:
-        python-version: "3.11"
+        python-version: "3.14"
+        cache: "pip"
+
     - name: Install Python dependencies
       run: |
         sudo apt-get install python3-pip graphviz
@@ -29,7 +31,7 @@ jobs:
 
     - name: Build book HTML
       run: |
-        jupyter-book build --all ./content
+        KERAS_BACKEND="torch" jupyter-book build --all ./content
 
     - name: Push _build/html to gh-pages
       run: |
@@ -37,5 +39,6 @@ jobs:
         git config --global user.email "$GITHUB_ACTOR@users.noreply.github.com"
         git config --global user.name "$GITHUB_ACTOR"
         git remote set-url origin "https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY"
-
         ghp-import ./content/_build/html -f -p -n
+
+

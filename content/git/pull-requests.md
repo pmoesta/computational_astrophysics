@@ -20,7 +20,7 @@ managing who can do different things to the repos under its control.
 Let's clone this repo:
 
 ```bash
-git clone git@github.com:Computational-Astrophysics-API:test-repo.git
+git clone git@github.com:Computational-Astrophysics-API/test-repo.git
 cd test-repo
 ```
 

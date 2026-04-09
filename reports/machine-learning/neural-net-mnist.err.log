@@ -1,0 +1,73 @@
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.14.3/x64/lib/python3.14/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+    ~~~~~~~~~^
+        nb,
+        ^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "/opt/hostedtoolcache/Python/3.14.3/x64/lib/python3.14/site-packages/nbclient/client.py", line 1323, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/hostedtoolcache/Python/3.14.3/x64/lib/python3.14/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.14.3/x64/lib/python3.14/asyncio/base_events.py", line 719, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/opt/hostedtoolcache/Python/3.14.3/x64/lib/python3.14/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+        cell, index, execution_count=self.code_cells_executed + 1
+    )
+  File "/opt/hostedtoolcache/Python/3.14.3/x64/lib/python3.14/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/opt/hostedtoolcache/Python/3.14.3/x64/lib/python3.14/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+training_set = []
+with zipfile.ZipFile("mnist_train.csv.zip") as zf:
+    with zf.open("mnist_train.csv") as f:
+        for line in f:
+            training_set.append(TrainingDigit(line.decode("utf8").strip("\n")))
+------------------
+
+
+[31m---------------------------------------------------------------------------[39m
+[31mAttributeError[39m                            Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[5][39m[32m, line 5[39m
+[32m      1[39m training_set = []
+[32m      2[39m [38;5;28;01mwith[39;00m zipfile.ZipFile([33m"mnist_train.csv.zip"[39m) [38;5;28;01mas[39;00m zf:
+[32m      3[39m     [38;5;28;01mwith[39;00m zf.open([33m"mnist_train.csv"[39m) [38;5;28;01mas[39;00m f:
+[32m      4[39m         [38;5;28;01mfor[39;00m line [38;5;28;01min[39;00m f:
+[32m----> [39m[32m5[39m             training_set.append(TrainingDigit(line.decode([33m"utf8"[39m).strip([33m"\n"[39m)))
+
+[36mCell[39m[36m [39m[32mIn[2][39m[32m, line 10[39m, in [36mTrainingDigit.__init__[39m[34m(self, raw_string)[39m
+[32m      6[39m         self.raw_string = raw_string
+[32m      7[39m 
+[32m      8[39m         [38;5;66;03m# make the data range from 0.01 to 1.00[39;00m
+[32m      9[39m         _tmp = raw_string.split([33m","[39m)
+[32m---> [39m[32m10[39m         self.scaled = np.asfarray(_tmp[[32m1[39m:])/[32m255.0[39m * [32m0.99[39m + [32m0.01[39m
+[32m     11[39m 
+[32m     12[39m         [38;5;66;03m# the correct answer[39;00m
+[32m     13[39m         self.num = int(_tmp[[32m0[39m])
+
+[36mFile [39m[32m/opt/hostedtoolcache/Python/3.14.3/x64/lib/python3.14/site-packages/numpy/__init__.py:778[39m, in [36m__getattr__[39m[34m(attr)[39m
+[32m    775[39m     [38;5;28;01mraise[39;00m [38;5;167;01mAttributeError[39;00m(__former_attrs__[attr], name=[38;5;28;01mNone[39;00m)
+[32m    777[39m [38;5;28;01mif[39;00m attr [38;5;129;01min[39;00m __expired_attributes__:
+[32m--> [39m[32m778[39m     [38;5;28;01mraise[39;00m [38;5;167;01mAttributeError[39;00m(
+[32m    779[39m         [33mf[39m[33m"[39m[33m`np.[39m[38;5;132;01m{[39;00mattr[38;5;132;01m}[39;00m[33m` was removed in the NumPy 2.0 release. [39m[33m"[39m
+[32m    780[39m         [33mf[39m[33m"[39m[38;5;132;01m{[39;00m__expired_attributes__[attr][38;5;132;01m}[39;00m[33m"[39m,
+[32m    781[39m         name=[38;5;28;01mNone[39;00m
+[32m    782[39m     )
+[32m    784[39m [38;5;28;01mif[39;00m attr == [33m"[39m[33mchararray[39m[33m"[39m:
+[32m    785[39m     warnings.warn(
+[32m    786[39m         [33m"[39m[33m`np.chararray` is deprecated and will be removed from [39m[33m"[39m
+[32m    787[39m         [33m"[39m[33mthe main namespace in the future. Use an array with a string [39m[33m"[39m
+[32m    788[39m         [33m"[39m[33mor bytes dtype instead.[39m[33m"[39m, [38;5;167;01mDeprecationWarning[39;00m, stacklevel=[32m2[39m)
+
+[31mAttributeError[39m: `np.asfarray` was removed in the NumPy 2.0 release. Use `np.asarray` with a proper dtype instead.
+

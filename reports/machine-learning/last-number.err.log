@@ -1,0 +1,66 @@
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.14.3/x64/lib/python3.14/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+    ~~~~~~~~~^
+        nb,
+        ^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "/opt/hostedtoolcache/Python/3.14.3/x64/lib/python3.14/site-packages/nbclient/client.py", line 1323, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/hostedtoolcache/Python/3.14.3/x64/lib/python3.14/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.14.3/x64/lib/python3.14/asyncio/base_events.py", line 719, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/opt/hostedtoolcache/Python/3.14.3/x64/lib/python3.14/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+        cell, index, execution_count=self.code_cells_executed + 1
+    )
+  File "/opt/hostedtoolcache/Python/3.14.3/x64/lib/python3.14/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/opt/hostedtoolcache/Python/3.14.3/x64/lib/python3.14/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+frac = nn.check_accuracy()
+print(f"fraction correct: {frac}")
+------------------
+
+
+[31m---------------------------------------------------------------------------[39m
+[31mTypeError[39m                                 Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[7][39m[32m, line 1[39m
+[32m----> [39m[32m1[39m frac = nn.check_accuracy()
+[32m      2[39m print(f"fraction correct: {frac}")
+
+[36mCell[39m[36m [39m[32mIn[5][39m[32m, line 55[39m, in [36mNeuralNetwork.check_accuracy[39m[34m(self)[39m
+[32m     51[39m         the fraction we get correct"""
+[32m     52[39m 
+[32m     53[39m         n_right = [32m0[39m
+[32m     54[39m         [38;5;28;01mfor[39;00m model [38;5;28;01min[39;00m self.train_set:
+[32m---> [39m[32m55[39m             y_nn = self.predict(model)
+[32m     56[39m             [38;5;28;01mif[39;00m y_nn == model.y:
+[32m     57[39m                 n_right += [32m1[39m
+[32m     58[39m         [38;5;28;01mreturn[39;00m n_right / len(self.train_set)
+
+[36mCell[39m[36m [39m[32mIn[5][39m[32m, line 47[39m, in [36mNeuralNetwork.predict[39m[34m(self, model)[39m
+[32m     44[39m     [38;5;28;01mdef[39;00m predict(self, model):
+[32m     45[39m         [33m"""predict the outcome using our trained matrix A """[39m
+[32m     46[39m         z = self.g(self.A @ model.x_scaled)
+[32m---> [39m[32m47[39m         [38;5;28;01mreturn[39;00m model.interpret_result(z)
+
+[36mCell[39m[36m [39m[32mIn[2][39m[32m, line 23[39m, in [36mModelData.interpret_result[39m[34m(self, out)[39m
+[32m     19[39m         """take the network output and return a the number from the allowed
+[32m     20[39m         sequence we are closest to
+[32m     21[39m 
+[32m     22[39m         """
+[32m---> [39m[32m23[39m         [38;5;28;01mreturn[39;00m max([32m0[39m, min([32m9[39m, int(np.round(out, decimals=[32m0[39m))))
+
+[31mTypeError[39m: only 0-dimensional arrays can be converted to Python scalars
+

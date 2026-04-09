@@ -3,7 +3,7 @@ Computational Astrophysics
 
 Philipp Mösta
 
-(Spring 2024)
+(Spring 2026)
 
 This is a collection of notebooks on computational astrophysics.
 The notebooks build on/modify the content available as part of 

@@ -9,7 +9,7 @@ $$
 \begin{align*}
 \frac{\partial \rho}{\partial t} + \frac{\partial (\rho u)}{\partial x} &= 0 \\
 \frac{\partial (\rho u)}{\partial t} + \frac{\partial}{\partial x} (\rho u^2 + p + \frac{B^2}{2} - B \cdot B) &= 0 \\
-\frac{\partial (\rho E)}{\partial t} + \frac{\partial}{\partial x} \left [ (\rho E + p) u - B (u\cdot B)\right ] &= 0 \\
+\frac{\partial (\rho E)}{\partial t} + \frac{\partial}{\partial x} \left [ (\rho E + p) u - B (u \cdot B)\right ] &= 0 \\
 \frac{\partial \vec{B}}{\partial t} + \frac{\partial}{\partial x} (B u -u B) &= 0 \\
 \end{align*}
 $$
@@ -20,7 +20,7 @@ $$
 \rho E = \rho e + \frac{1}{2} \rho u^2,
 $$
 
-$\vec{B}$ is the magnetic field vector, and the system is closed by an equation of state:
+$B$ is the magnetic field vector, and the system is closed by an equation of state:
 
 $$p = p(\rho, e)$$
 
@@ -36,11 +36,11 @@ where $\gamma$ is a constant.  For an ideal gas, $\gamma$ is the ratio of specif
 As expressed above, the ideal MHD equations are in conservative form.  We can define the conservative
 state, ${\bf U}$ as:
 
-$${\bf U} = \left ( \begin{array}{c} \rho \\ \rho u \\ \rho E \\ \vec{B}\end{array} \right )$$
+$${\bf U} = \left ( \begin{array}{c} \rho \\ \rho u \\ \rho E \\ B\end{array} \right )$$
 
 and the flux, ${\bf F}({\bf U})$ as:
 
-$${\bf F} = \left ( \begin{array}{c} \rho u \\ \rho u^2 + p + \frac{B^2}{2} - \vec{B} \cdot \vec{B} \\ (\rho E + p) u - \vec{B} (\vec{u}\cdot \vec{B}) \\ \vec{B}\vec{u} - \vec{u}\vec{B} \end{array} \right )$$
+$${\bf F} = \left ( \begin{array}{c} \rho u \\ \rho u^2 + p + \frac{B^2}{2} - B \cdot B \\ (\rho E + p) u - B (u \cdot B) \\ B u - u B \end{array} \right )$$
 
 and then our system in conservative form is:
 

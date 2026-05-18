@@ -50,8 +50,7 @@ and we can do the same technique of discretizing the domain into cells
 and integrating over the volume of a cell to get the finite-volume
 conservative update for the system:
 
-$$\frac{\partial {\bf U}_i}{\partial t} =
-  - \frac{1}{\Delta x} \left [ {\bf F}({\bf U}_{i+1/2}) - {\bf F}({\bf U}_{i+1/2}) \right ]$$
+$$\frac{\partial {\bf U}_i}{\partial t} = - \frac{1}{\Delta x} \left [ {\bf F}({\bf U}_{i+1/2}) - {\bf F}({\bf U}_{i+1/2}) \right ]$$
 
 ## Primitive variable form
 

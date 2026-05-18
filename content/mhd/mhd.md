@@ -57,7 +57,7 @@ $$\frac{\partial {\bf U}_i}{\partial t} =
 
 We again can express the MHD equations in terms of the primitive variables, ${\bf q}$:
 
-$${\bf q} = \left ( \begin{array}{c} \rho \\ u \\ p \end{array} \right )$$
+$${\bf q} = \left ( \begin{array}{c} \rho \\ u \\ p \\ B \end{array} \right )$$
 
 and the evolution equations are:
 

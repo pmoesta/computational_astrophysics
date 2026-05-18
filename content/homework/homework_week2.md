@@ -66,7 +66,7 @@ Homework (all weeks) along with any analytic derivations, notes, etc.
 
 The equation of motion for a body in a gravitational three-body system is given by
 
-$$\ddot{\bf{x}}_i = G\sum_{j=1,j \neq i}^3 m_j \frac{\bf{x}_j - \bf{x}_i}{|\bf{x}_j - \bf{x}_i|}.$$
+$$\ddot{\bf{x}}_i = G\sum_{j=1,j \neq i}^3 m_j \frac{\bf{x}_j - \bf{x}_i}{|\bf{x}_j - \bf{x}_i|^3}.$$
 
 The three-body problem famously has no analytical solution, and these systems are characterized as being highly chaotic and inherently unstable. However, stable three-body orbits have been found numerically. These are unlikely to be found in nature due being highly sensitive to initial conditions and perturbations. One of these stable orbits is the so-called figure-eight orbit, which is what we will be simulating here. For this exercise, we will set $G=1$.
 

@@ -63,7 +63,7 @@ $\frac{\partial\vec{A}}{\partial t} = (\vec{B}\cdot\vec{u} -\vec{u}\cdot\vec{B})
 
 # Conservative to Primitive variable conversion in MHD
 
-Another part of our solver for the Hydrodynamics equations that we have developed as part of the class is the Conservative to Primitive variable conversion. While we could do this analytically in the example in class, this is generally not possible. Especially in MHD the conversion problem becomes significantly more complex with standard methods employing multi-dimensional root solvers to iteratively find a solution for these equations. You can find a detailed comparison of different Conservative to Primitive methods (in General Relativity) here
+Another part of our solver for the Hydrodynamics equations that we have developed as part of the class is the Conservative to Primitive variable conversion. While we could do this analytically in the example in class, this is generally not possible. Especially in MHD the conversion problem becomes significantly more complex with standard methods employing multi-dimensional root solvers to iteratively find a solution for these equations. You can find a detailed comparison of different Conservative to Primitive methods (in General Relativity) here https://ui.adsabs.harvard.edu/abs/2018ApJ...859...71S/abstract
 
 
 

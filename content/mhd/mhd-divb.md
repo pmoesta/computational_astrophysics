@@ -41,5 +41,5 @@ $\frac{\partial\vec{B}}{\partial t} + \frac{\partial}{\partial x} (\vec{B}\cdot\
 
 and
 
-$\frac{1}{c_h^2} \frac{\partial\Phi}{\partial t} + \nabla \cdot \vec{B} = 0$ with $c_h \epsilon [0,\inft]$
+$\frac{1}{c_h^2} \frac{\partial\Phi}{\partial t} + \nabla \cdot \vec{B} = 0$ with $c_h \epsilon [0,\infty]$
 

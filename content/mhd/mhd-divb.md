@@ -1,3 +1,5 @@
+# The div B = 0 constraint
+
 One thing that makes integrating the equations of magnetohydrodynamics more complicated is the additional constraint equation that we have to deal with. The no-monopole constraint that comes from the Maxwell equations 
     
 $$\nabla \cdot \vec{B} = 0$$

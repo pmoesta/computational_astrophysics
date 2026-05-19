@@ -37,9 +37,9 @@ In code this looks like this
 
 One of the main altervatives to constrained transport is hyperbolic divergence cleaning. In this approach we add a scalar field $\Phi$ to the induction equation. If we define $\Phi$ to be the discrete $\nabla \vec{B}$ violation on our grid, we can add an additional evolution equation to our system and use it to transport and damp any arising constraint violations. This can be written in the following form (via a hyperbolic equation):
 
-$\partial{\vec{B}}{\partial t} + \frac{\partial}{\partial x} (\vec{B}\cdot\vec{u} -\vec{u}\cdot\vec{B}) + \nabla \Phi = 0$
+$\frac{\partial\vec{B}}{\partial t} + \frac{\partial}{\partial x} (\vec{B}\cdot\vec{u} -\vec{u}\cdot\vec{B}) + \nabla \Phi = 0$
 
 and
 
-$\partial{\Phi} {\partial t} + \frac{\partial}{\partial x} (\Phi} + \nabla \cdot \vec{B} = 0.$
+$\frac{\partial\Phi}{\partial t} + \frac{\partial x}{\Phi} + \nabla \cdot \vec{B} = 0.$
 

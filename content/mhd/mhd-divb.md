@@ -41,5 +41,14 @@ $\frac{\partial\vec{B}}{\partial t} + \frac{\partial}{\partial x} (\vec{B}\cdot\
 
 and
 
-$\frac{1}{c_h^2} \frac{\partial\Phi}{\partial t} + \nabla \cdot \vec{B} = 0$ with $c_h \epsilon [0,\infty]$
+$\frac{1}{c_h^2} \frac{\partial\Phi}{\partial t} + \nabla \cdot \vec{B} = 0$ with $c_h \epsilon [0,\infty].$
+
+In the limit of $\Phi -> 0$ and $\nabla \cdot \vec{B}$ we recover the ideal-MHD induction equation. The characteristic velocities of the evolution system for MHD without and with divergence cleaning differ. In the former, the largest-magnitude wave speed is the fast magnetosonic wave speed. The inclusion of divergence cleaning introduces an additional mode, corresponding to eigenvalue for the evolution of the divergence cleaning field $\Phi$. We can use this additional eigenvalue to set the hyperbolic damping speed $c_h$ of the scheme, for example we can set it to the speed of light.
+
+We can also add an additional term 
+
+$\frac{1}{c_h^2} \frac{\partial\Phi}{\partial t} + \frac{1}{c_p^2} \Phi + \nabla \cdot \vec{B} = 0$ with $c_p \epsilon [0,\infty].$
+
+This additional term will now also damp away any existing constraint violations. In this way we can both damp and transport away constraint violations on our grid.
+
 

@@ -61,4 +61,10 @@ When we take the divergence of a curl we automatically have $\nabla \cdot \nabla
 
 $\frac{\partial\vec{A}}{\partial t} = (\vec{B}\cdot\vec{u} -\vec{u}\cdot\vec{B}) - \frac{\partial (\Phi - \vec{A})}{\partial x}$ to our evolution equation without changing the principal part. Care has to be taken when choosing a suitable gauge as some choices are better behaved than others.
 
+# Conservative to Primitive variable conversion in MHD
+
+Another part of our solver for the Hydrodynamics equations that we have developed as part of the class is the Conservative to Primitive variable conversion. While we could do this analytically in the example in class, this is generally not possible. Especially in MHD the conversion problem becomes significantly more complex with standard methods employing multi-dimensional root solvers to iteratively find a solution for these equations. You can find a detailed comparison of different Conservative to Primitive methods (in General Relativity) here
+
+
+
 

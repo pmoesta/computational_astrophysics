@@ -34,3 +34,7 @@ In code this looks like this
 ![Constrained transport in action](mhd-code.png)
   
 # Hyperbolic divergence cleaning
+
+One of the main altervatives to constrained transport is hyperbolic divergence cleaning. In this approach we add a scalar field $\Phi$ to the induction equation. If we define $\Phi$ to be the discrete $\nabla \vec{B}$ violation on our grid, we can add an additional evolution equation to our system and use it to transport and damp any arising constraint violations. This can be written in the following form (via a hyperbolic equation):
+
+$

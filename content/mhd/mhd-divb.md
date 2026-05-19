@@ -28,5 +28,9 @@ The key strategy of constrained transport schemes is using the electric field co
 ![Discrete induction equation](mhd-induction.png)
 
 we can use the fact that in ideal MHD the electric field at the cell edges can be expressed as $B^k v^i - v^k B^i$.
+
+In code this looks like this
+
+![Constrained transport in action](mhd-code.png)
   
 # Hyperbolic divergence cleaning

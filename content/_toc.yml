@@ -83,7 +83,7 @@ parts:
       sections:
       - file: ODEs/application-lane-emden
       file: ODEs/ODEs-implicit
-      title: ✱ Stiff ODEs
+      title: Stiff ODEs
       sections:
       - file: ODEs/ODEs-implicit-systems
       - file: ODEs/ODEs-implicit-nonlinear-systems

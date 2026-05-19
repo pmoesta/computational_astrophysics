@@ -1,6 +1,6 @@
 One thing that makes integrating the equations of magnetohydrodynamics more complicated is the additional constraint equation that we have to deal with. The no-monopole constraint that comes from the Maxwell equations 
     
-$$div \vec{B} = 0$$
+$$\nabla \cdot \vec{B} = 0$$
 
 has to be satisfied when we integrate our evolution equations for the magnetic field. This is trivially true in the limit of infinite resolution (and via the CFL condition infinitely-small timesteps) but turns out to be a problem when we integrate the equations without any additional measures employed. 
 

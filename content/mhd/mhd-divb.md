@@ -59,6 +59,6 @@ $\frac{\partial\vec{A}}{\partial t} = (\vec{B}\cdot\vec{u} -\vec{u}\cdot\vec{B})
 
 When we take the divergence of a curl we automatically have $\nabla \cdot \nabla \cross \vec{B} = 0$ so we get the no-monopole constraint satisfied by construction. One complexity with the vector potential in applications in relativity is that we need to choose a gauge due to the extra degrees of freedom in the vector potential definition. We can for example add the electromagnetic scalar potential 
 
-$\frac{\partial\vec{A}}{\partial t} = (\vec{B}\cdot\vec{u} -\vec{u}\cdot\vec{B}) - \frac{\partial\Phi - \vec{A}}{\partial x}$ to our evolution equation without changing the principal part. Care has to be taken when choosing a suitable gauge as some choices are better behaved than others.
+$\frac{\partial\vec{A}}{\partial t} = (\vec{B}\cdot\vec{u} -\vec{u}\cdot\vec{B}) - \frac{\partial (\Phi - \vec{A})}{\partial x}$ to our evolution equation without changing the principal part. Care has to be taken when choosing a suitable gauge as some choices are better behaved than others.
 
 

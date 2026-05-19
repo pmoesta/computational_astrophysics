@@ -20,5 +20,11 @@ In constrained transport we make use of our flux-conservative formulation to gua
 ![Staggered mesh](mhd-ct.png)
     
 $\vec{B}$ and $\vec{E}$ are the staggered magnetic and electric field vectors. Similarly to how we interpreted the cell-centered variables of the state vector as volume-averages/volume-integrals over the cell, we can view the magnetic field as the surface integral/average over the cell face and the electric field as the line integral over the cell edge. 
+
+The key strategy of constrained transport schemes is using the electric field components stored at the cell edges to implement the discrete induction equation for the magnetic field. For example, in
+
+![Discrete induction equation](mhd-induction.png)
+
+we can use the fact that in ideal MHD the electric field at the cell edges can be expressed as $B^k v^i - v^k B^i$.
   
 # Hyperbolic divergence cleaning

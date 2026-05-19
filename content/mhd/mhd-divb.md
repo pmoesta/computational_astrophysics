@@ -1,17 +1,24 @@
-As for the Euler equations we need to compute the fluxes through the interface
-and solve the Riemann problem for the MHD equations.  We use the same formulations with
-left and right primitive variable states and we want to find the unique state on the interface:
+One thing that makes integrating the equations of magnetohydrodynamics more complicated is the additional constraint equation that we have to deal with. The no-monopole constraint that comes from the Maxwell equations 
     
-$${\bf q}_{i+1/2} = \mathcal{R}({\bf q}_{i+1/2,L}, {\bf q}_{i+1/2,R})$$
+$$div \vec{B} = 0$$
+
+has to be satisfied when we integrate our evolution equations for the magnetic field. This is trivially true in the limit of infinite resolution (and via the CFL condition infinitely-small timesteps) but turns out to be a problem when we integrate the equations without any additional measures employed. 
+
+There are multiple strategies used by application codes solving the MHD equations:
+
+ - hyperbolic divergence cleaning
+ - constrained transport
+ - evolving the magnetic vector potential
+ - projecting the divergence out
+
+They each have pros/cons. We'll focus here on the most commonly used ones, hyperbolic divergence cleaning and constrained transport.
+
+# Constrained transport
+
+In constrained transport we make use of our flux-conservative formulation to guarantee that even in the discrete system we are not generating any divergence of the magnetic field during the evolution. To do so we need to use a staggered mesh to store the magnetic field $$\vec{B}$$. This adds complications to our finite-volume grid as it involves keeping track of different variable centering in the state vector and requires additional interpolation operations. You can see a sketch of where magnetic and electric field (not part of the state vector in ideal MHD but used for calculating the fluxes in constraint transport) are defined/stored in a fully-staggered mesh used for constrained transport here.
     
-Information about the jump across this interface will be carried away from the interface by now seven magnetohydrodynamic waves.  We can define eight regions separated by the seven waves.
+![Staggered mesh](mhd-ct.png)
     
-![MHD Riemann solution structure](mhd-riemann.png)
-    
-$R1$ and $R8$ are just our original states&mdash;since no waves have reached them yet, the state is unchanged. The states in between are separated by the fast and slow magnetosonic, the Alfven waves, and the contact discontinuity.
+$\vec{B}$ and $\vec{E}$ are the staggered magnetic and electric field vectors. Similarly to how we interpreted the cell-centered variables of the state vector as volume-averages/volume-integrals over the cell, we can view the magnetic field as the surface integral/average over the cell face and the electric field as the line integral over the cell edge. 
   
-# Solving the Riemann problem in MHD
-  
-Solving the Riemann problem in MHD exactly is much harder than for the Euler equations. You can find details about 
-some of the methods used here https://pure.mpg.de/rest/items/item_150800/component/file_150799/content#:~:text=The%20general%20Riemann%20problem%20in,the%20density%20may%20be%20discontinuous.
-As a result often approximative solvers are used for MHD simulations. Typical examples are the HLLE and HLLD Riemann solvers. Outside of the Riemann solvers we can use the same methods that we developed for the Euler equations to solve the MHD equations.
+# Hyperbolic divergence cleaning
